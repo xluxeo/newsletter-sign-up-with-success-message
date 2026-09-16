@@ -29,11 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot mobile](mobile.png)
+![Screenshot mobile-success](mobile-success.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://github.com/xluxeo/newsletter-sign-up-with-success-message)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -49,4 +50,4 @@ Users should be able to:
 ## Author
 
 - Website - [xluxeo](https://xluxeo.de)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/xluxeo)
+- Frontend Mentor - [xluxeo](https://www.frontendmentor.io/profile/xluxeo)

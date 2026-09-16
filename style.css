@@ -218,3 +218,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-block-start: auto;
     min-height: 3.5rem;
 }
+
+@media (min-width: 64em) {
+    .c-newsletter {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 1rem;
+        max-inline-size: 64rem;
+        border-radius: 1rem;
+    }
+}

@@ -120,12 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-form__title {
     font-size: clamp(2.5rem, 8vw, 3.5rem);
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
 }
 
 .c-form__list {
     list-style: none;
-    margin-bottom: 2.5rem;
+    margin-block-end: 2.5rem;
 }
 
 .c-form__list-item {
@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary);
 }
 
-.input-group.has-error .c-form__input::placeholder {
+.has-error .c-form__input::placeholder {
     color: var(--error-text-color);
 }
 
@@ -270,5 +270,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .c-success .c-button {
         margin-block-start: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }

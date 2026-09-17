@@ -72,7 +72,7 @@ submitButton.addEventListener('click', () => {
 
 dismissButton.addEventListener('click', () => {
   successSection.style.display = 'none';
-  newsletterSection.style.display = 'block';
+  newsletterSection.style.display = '';
   form.reset();
   setErrorState(false);
 });

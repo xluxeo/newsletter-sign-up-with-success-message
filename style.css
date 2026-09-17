@@ -171,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, transform 0.2s ease;
 }
 
 .c-button:hover, .c-button:focus, .c-button:active {
@@ -220,6 +221,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 64em) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: grid;
+        flex: 1;
+        place-items: center;
+    }
+
+    .attribution {
+        inline-size: 100%;
+        margin-block-start: 0;
+    }
+
     .c-newsletter {
         display: flex;
         flex-direction: row-reverse;
@@ -229,5 +246,16 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1rem;
         max-inline-size: 64rem;
         border-radius: 1rem;
+    }
+
+    .c-success {
+        inline-size: 30rem;
+        min-block-size: 23rem;
+        padding: 3rem;
+        border-radius: 1.5rem;
+    }
+
+    .c-success .c-button {
+        margin-block-start: 2rem;
     }
 }

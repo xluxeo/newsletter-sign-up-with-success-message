@@ -8,6 +8,10 @@
     --gradient-start: #ff4766;
     --gradient-end: #ff6a3d;
     --glow-color: rgba(255, 71, 102, 0.4);
+    --input-border-color: #d0d0d0;
+    --error-background-color: rgba(255, 71, 102, 0.04);
+    --error-text-color: rgba(35, 39, 66, 0.6);
+    --button-shadow: 0 0.75rem 2rem rgba(255, 71, 102, 0.6);
 
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -20,6 +24,15 @@
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2rem;
+
+    --border-width: 0.0625rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --input-min-height: 3.25rem;
+    --button-min-height: 3.5rem;
+    --button-hover-offset: -0.125rem;
 }
 
 @font-face {
@@ -63,9 +76,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .sr-only {
     position: absolute;
-    margin: -1px;
-    inline-size: 1px;
-    block-size: 1px;
+    margin: -0.0625rem;
+    inline-size: 0.0625rem;
+    block-size: 0.0625rem;
     padding: 0;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
@@ -142,22 +155,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-form__input {
     inline-size: 100%;
-    min-height: 3.25rem;
+    min-height: var(--input-min-height);
     padding: 0.9rem 1rem;
-    border: 1px solid #d0d0d0;
-    border-radius: 8px;
+    border: var(--border-width) solid var(--input-border-color);
+    border-radius: var(--radius-sm);
     font-size: var(--font-size-md);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .input-group.has-error .c-form__input {
     border-color: var(--primary);
-    background-color: rgba(255, 71, 102, 0.04);
+    background-color: var(--error-background-color);
     color: var(--primary);
 }
 
 .input-group.has-error .c-form__input::placeholder {
-    color: rgba(35, 39, 66, 0.6);
+    color: var(--error-text-color);
 }
 
 .c-button {
@@ -165,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
     inline-size: 100%;
     padding: 1rem var(--spacing-md);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     background-color: var(--blue-800);
     color: var(--white);
     font-size: 1rem;
@@ -176,9 +189,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-button:hover, .c-button:focus, .c-button:active {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-    box-shadow: 0 12px 32px rgba(255, 71, 102, 0.6);
+    box-shadow: var(--button-shadow);
     filter: brightness(1.05);
-    transform: translateY(-2px);
+    transform: translateY(var(--button-hover-offset));
 }
 
 .c-success {
@@ -217,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-success .c-button {
     margin-block-start: auto;
-    min-height: 3.5rem;
+    min-height: var(--button-min-height);
 }
 
 @media (min-width: 64em) {
@@ -245,14 +258,14 @@ h1, h2, h3, h4, h5, h6 {
         gap: 3rem;
         padding: 1rem;
         max-inline-size: 64rem;
-        border-radius: 1rem;
+        border-radius: var(--radius-lg);
     }
 
     .c-success {
         inline-size: 30rem;
         min-block-size: 23rem;
         padding: 3rem;
-        border-radius: 1.5rem;
+        border-radius: var(--radius-xl);
     }
 
     .c-success .c-button {
